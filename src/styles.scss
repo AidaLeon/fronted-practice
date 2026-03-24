@@ -1,0 +1,37 @@
+/* styles.scss */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/assets/fonts/FuturaPT.woff2") format("woff2");
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #f3f3f3; /* El color gris de los bordes */
+  line-height: 1.5;
+  font-family: "Futura PT", Arial, sans-serif;
+  overflow-x: hidden;
+}
+p{
+  line-height: 1.5rem;
+}
+h1, h2, h3, h4, h5, h6{
+  line-height: 2rem;
+}
+
+app-root {
+  width: 100%;
+  display: block;
+}

@@ -1,0 +1,159 @@
+@use '../../../styles/_mixins' as *;
+
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.25rem;
+  gap: 1.875rem;
+  box-sizing: border-box;
+  width: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+nav.first-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.875rem;
+}
+nav.first-nav .main-nav__logo__image {
+  width: 5rem;
+  height: 2.5rem;
+}
+nav.first-nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+nav.first-nav ul {
+  display: none;
+}
+
+
+.option-nav {
+  display: none;
+}
+
+.line {
+  display: block;
+  height: 0;
+  border-top: 2px solid #eee;
+}
+
+.option-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.second-nav {
+  display: flex;
+  align-items: center;
+  padding: 0 1.25rem;
+  gap: 1.875rem;
+}
+nav.second-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1.25rem;
+}
+
+nav.second-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+nav.second-nav ul li:nth-child(1) a {
+  color: #ff764d;
+}
+
+@include media(md) {
+  nav.first-nav .main-nav__logo__image {
+    width: 3.8rem;
+    height: 1.8rem;
+  }
+
+  nav.first-nav .main-nav__logo__text {
+    display: none;
+  }
+
+  nav.first-nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  nav.first-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.25rem;
+    width: 100%;
+  }
+
+  nav.first-nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.9rem;
+  }
+
+  nav.first-nav ul li a svg {
+    margin-left: 0.1rem;
+  }
+
+  nav.first-nav ul li:nth-last-child(1) a {
+    color: #ff764d;
+  }
+
+  .option-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .option-nav {
+    display: flex;
+    font-size: 0.75rem;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  div.option-nav ul li:nth-child(1) a {
+    color: #0000ff;
+  }
+
+  .option-nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 0.75rem;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  hr {
+    border: 0;
+    border-top: 0.125rem solid #f3f3f3;
+    margin: 0;
+  }
+}
