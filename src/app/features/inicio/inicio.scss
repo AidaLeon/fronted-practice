@@ -1,16 +1,21 @@
 @use '../../../styles/_mixins' as *;
 
+.margin {
+  margin: 2rem 0;
+  padding: 2rem;
+  
+  @include media(md) {
+    padding: 1rem 6rem;
+  }
+}
 .page-about {
   margin: 0;
-
   box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: column;
 
-  @include media(md) {
-    padding: 1rem 6rem;
-  }
+  
 
   header {
     position: relative;
@@ -83,10 +88,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
     width: 100%;
-    gap: 1.8rem;
-    min-height: 14rem;
-    margin: 1.5rem 0;
+
+    
 
     @include media(md) {
       min-height: 45rem;
@@ -95,42 +101,32 @@
 
     &--yellow {
       background-color: #fbffa7;
-      width: 55vw;
-      height: 100%;
-      right: 0;
+      width: 58.33333vw;
+      height: 58.33333vw;
       top: 0;
+      left: 41.66667vw;
       position: absolute;
       z-index: 0;
-      margin-right: -2rem;
+      
 
-      @include media(md) {
-        margin-right: -6rem;
-      }
     }
 
     &--media {
       z-index: 1;
       object-fit: cover;
-      width: 9rem;
-      height: 9rem;
+      width: 41.66667vw;
+      height: 41.66667vw;
       display: inline-block;
       vertical-align: middle;
       position: relative;
 
-      @include media(md) {
-        width: 35rem;
-        height: 35rem;
-      }
     }
 
     &--media:nth-child(3) {
-      width: 8rem;
-      height: 6rem;
+          width: 33.33333vw;
+          height: 25vw;
 
-      @include media(md) {
-        width: 25rem;
-        height: 20rem;
-      }
+      
     }
   }
 
@@ -147,8 +143,8 @@
     justify-content: center;
     min-height: 18rem;
     padding: 1.8rem 0;
-    gap: 1.8rem;
     margin: 1.5rem 0;
+    gap: 2rem;
 
     @include media(md) {
       min-height: 50rem;
@@ -158,16 +154,16 @@
 
     &--green {
       background-color: #B6FFC0;
-      width: 60vw;
+          width: 58.33333vw;
+    height: 75vw;
+    left: 0;
       height: 100%;
-      left: 0;
+      
       top: 0;
       position: absolute;
       z-index: 0;
-      margin-left: -2rem;
 
       @include media(md) {
-        margin-left: -6rem;
       }
     }
 
@@ -177,7 +173,8 @@
       flex-direction: column;
       align-items: flex-start;
       position: relative;
-      gap: 2rem;
+      gap: 4rem;
+      
 
       @include media(md) {
         margin: 2rem 0;
@@ -185,33 +182,27 @@
 
       &--media {
         margin: 0;
-        width: 33vw;
+         width: 33.33333vw;
         height: 25vw;
         object-fit: cover;
         display: inline-block;
         vertical-align: middle;
         position: relative;
 
-        @include media(md) {
-          height: 20rem;
-          width: 27.3rem;
-        }
       }
     }
 
     &--media {
       z-index: 2;
-      width: 45vw;
-      height: 45vw;
+      width: 41.66667vw;
+    height: 41.66667vw;
+    
       object-fit: cover;
       display: inline-block;
       vertical-align: middle;
       position: relative;
 
-      @include media(md) {
-        width: 35rem;
-        height: 35rem;
-      }
+     
     }
   }
 
@@ -232,8 +223,9 @@
 
     &--lavander {
       background-color: #D5B3FF;
-      width: 70vw;
-      height: 100%;
+          width: 66.66667vw;
+    height: 58.33333vw;
+        left: 16.66667vw;
       position: absolute;
       z-index: 0;
     }
@@ -244,45 +236,45 @@
       display: inline-block;
       vertical-align: middle;
       
-      width: 45vw;
-      height: 45vw;
+      width: 41.66667vw;
+    height: 41.66667vw;
+    margin-left: 1rem;
 
-      @include media(md) {
-        margin-left: 7rem;
-        width: 35rem;
-        height: 35rem;
-      }
+    @include media(md) {
+      margin-left: 2rem;
+       
+    }
+
     }
 
     &--media:nth-child(2) {
       width: 8rem;
-      height: 25vw;
-      margin-left: -2rem;
+          width: 33.33333vw;
+    height: 25vw;
 
-      @include media(md) {
-        width: 25rem;
-        height: 20rem;
-        margin-left: -6rem;
-      }
+    
     }
   }
 
   &__section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
 
     @include media(md) {
       flex-direction: row;
+      flex-wrap: wrap;
       gap: 0;
-      min-height: 30rem;
+      min-height: auto;
     }
 
     &--media {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin: 2rem 0;
+      width: 100%;
+      margin: 0;
 
       p {
         font-size: 0.8rem;
@@ -323,10 +315,12 @@
       background-color: #B1C5FF;
       display: flex;
       justify-content: center;
-      margin-top: -2rem;
+      
       flex-direction: column;
       align-items: flex-start;
       padding: 2rem 2rem;
+      width: 100%;
+      margin: 0;
 
       h2 {
         font-size: 1rem;
@@ -342,9 +336,9 @@
       }
 
       @include media(md) {
-        width: 58%;
+       
         padding: 8.33333vw;
-        margin-top: 0;
+        margin: 0;
 
         h2 {
           font-size: 1.8rem;
