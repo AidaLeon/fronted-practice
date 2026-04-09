@@ -1,3 +1,5 @@
+@use '../styles/_mixins' as *;
+
 /* app.component.scss */
 :host {
   width: 100%;
@@ -7,9 +9,18 @@
 
 .app-container {
   width: 100%;
-  background-color: #ffffff; /* Fondo blanco de la web */
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
+
+  @include media(lg) {
+    max-width: 1200px; // o el ancho que quieras
+    margin: 0 auto; // centra
+  }
+
+  @include media(xl) {
+    max-width: 1400px;
+  }
 }
 
 header {

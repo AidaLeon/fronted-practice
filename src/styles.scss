@@ -1,34 +1,38 @@
-/* styles.scss */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: "Jost";
+  src: url("/assets/fonts/Jost-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Futura PT";
-  src: url("/assets/fonts/FuturaPT.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "Jost";
+  src: url("/assets/fonts/Jost-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
 }
 
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  background-color: #f3f3f3; /* El color gris de los bordes */
-  line-height: 1.5;
+  background-color: #f3f3f3;
   font-family: "Jost", sans-serif;
+  line-height: 1.5;
   overflow-x: hidden;
 }
-p{
-  line-height: 1.5rem;
+
+p {
+  line-height: 1.6;
 }
-h1, h2, h3, h4, h5, h6{
-  line-height: 2rem;
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
 }
 
 app-root {
